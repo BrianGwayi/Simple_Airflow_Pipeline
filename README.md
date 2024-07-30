@@ -68,11 +68,12 @@ def recent_response(transform_response):
 
   # Establish Connection to PostgreSQL Database
   conn = psycopg2.connect(
-            database = "listing_db",
-            user = "postgres",
-            host= 'localhost',
-            password = "password",
-            port = 5432)
+            database = Variable.get("DB_NAME"),
+            user = Varibale.get("POSTGRES_USER"),
+            host = "remote_db",
+            password = Variable.get("POSTGRES_PASSWORD"),
+            port = 5432
+            )
   cursor = conn.cursor()
 
   # Print PostgreSQL details
