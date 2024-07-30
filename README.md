@@ -112,6 +112,6 @@ buffer.seek(0)
 airflow webserver -p 8080
 airflow scheduler
 ```
+## Airflow Webserver UI
 ![End_Goal](assets/imgs/webserver_ui.png)
 
-[START Airflow Scheduler]  
