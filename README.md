@@ -17,6 +17,34 @@ Load - xml_feed to PostgreSQL
 
 ## End Goal - Job Listings in PostgreSQL Database
 ![End_Goal](assets/imgs/end_goal.png)
+
+## Extract - xml_feed
+### Import Required Libraries
 ```
+from airflow.decorators import dag, tasks
+from datetime import datetime, timedelta
+from IO import StringIO
+import pandas as pd
+import requests
+import psyscopg2
+import xmltodict
 ```
+### Instatiate a DAG
+```
+@dag(
+schedule=None,
+start_date=datetime(2024,7,30),
+catch_up=False,
+tags=["Team A"],
+)
+```
+### [START Extract Task]
+```
+@task()
+def gt_response():
+  url = "https://www.myjobmag.co.ke/aggregate_feed.xml"
+  xml_feed = response.get(url)
+  response = xmltodict.parse(xml_feed.text)
+  return response['rss']['channel']['item']
+``
 []()
