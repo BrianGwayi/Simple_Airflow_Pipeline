@@ -106,7 +106,13 @@ buffer.seek(0)
   cursor.close()
   conn.close()
 ```
-[SET Dependencies]  
+[SET Dependencies]
+```
+gt_response = gt_response()
+tf_response = tf_response(gt_response)
+gt_delta = gt_delta(tf_response)
+load_delta = load_delta(gt_delta)
+```
 [START Airflow Webserver]
 ```
 airflow webserver -p 8080
