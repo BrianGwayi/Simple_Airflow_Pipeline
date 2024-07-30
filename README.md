@@ -107,5 +107,11 @@ buffer.seek(0)
   conn.close()
 ```
 [SET Dependencies]  
-[START Airflow Webserver]  
+[START Airflow Webserver]
+```
+airflow webserver -p 8080
+airflow scheduler
+```
+![End_Goal](assets/imgs/webserver_ui.png)
+
 [START Airflow Scheduler]  
