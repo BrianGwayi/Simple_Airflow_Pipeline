@@ -19,7 +19,7 @@ Load - xml_feed to PostgreSQL
 ![End_Goal](assets/imgs/end_goal.png)
 
 ## Extract - xml_feed
-### Import Required Libraries
+Import Required Libraries
 ```
 from airflow.decorators import dag, tasks
 from datetime import datetime, timedelta
@@ -29,7 +29,7 @@ import requests
 import psyscopg2
 import xmltodict
 ```
-### Instatiate a DAG
+Instatiate a DAG
 ```
 @dag(
 schedule=None,
@@ -47,7 +47,7 @@ def gt_response():
   response = xmltodict.parse(xml_feed.text)
   return response['rss']['channel']['item']
 ```
-### [START Transform Task]
+[START Transform Task]
 ```
 @task()
 def tf_response():
@@ -58,10 +58,10 @@ def tf_response():
           'contact_detail','contact_telephone'], axis=1)
   return tf_response
 ```
-### [START Load Task]
+[START Load Task]
 ```
 
 ```
-### [SET Dependencies]
-### [START Airflow Webserver]
-### [START Airflow Scheduler]
+[SET Dependencies]
+[START Airflow Webserver]
+[START Airflow Scheduler]
