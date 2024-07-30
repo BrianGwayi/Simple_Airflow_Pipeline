@@ -46,5 +46,19 @@ def gt_response():
   xml_feed = response.get(url)
   response = xmltodict.parse(xml_feed.text)
   return response['rss']['channel']['item']
-``
-[]()
+```
+### [START Transform Task]
+```
+@task()
+def tf_response():
+  tf_response = DataFrame(gt_response)
+  tf_response = tf_response.\
+    astype({'id':'int64','pubDate':'datetime64[ns]','expiryDate':'datetime64[ns]'}).\
+    drop(['salary','city_area','location','postcode','contact_name',
+          'contact_detail','contact_telephone'], axis=1)
+  return tf_response
+```
+### [START Load Task]
+```
+
+```
