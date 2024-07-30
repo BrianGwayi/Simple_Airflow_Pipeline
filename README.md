@@ -14,6 +14,9 @@ Set up Postres SQL database
 Extract - xml_feed   
 Transform - xml_feed  
 Load - xml_feed to PostgreSQL  
+
+End Goal - Job Listings in PostgreSQL Database
+![End_Goal](assets/imgs/end_goal.png)
 ```
 ```
 []()
