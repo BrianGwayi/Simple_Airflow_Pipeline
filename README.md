@@ -12,8 +12,9 @@ Uniform Resource Locators - URLs
 ### Goals:  
 Set up Postres SQL database  
 Extract - xml_feed   
-Transform - xml_feed  
-Load - xml_feed to PostgreSQL  
+Transform - xml_feed 
+Get delta - new job lisitngs added
+Load - delta to PostgreSQL  
 Build History - way past 100 listing
 
 ## End Goal - Job Listings in PostgreSQL Database
@@ -60,7 +61,7 @@ def tf_response():
           'contact_detail','contact_telephone'], axis=1)
   return tf_response
 ```
-## Load - Job Listing
+## Get Delta
 [START Load Task]
 ```
 @task()
@@ -89,6 +90,21 @@ def recent_response(transform_response):
 
   return delta
 
+```
+## Load Delta - new job listings added
+```
+@task()
+def load_delta():
+buffer = StringIO()
+load_response.to_csv(buffer, index=False, header=False)
+buffer.seek(0)
+  cursor.copy_expert("""COPY jb_listing (jid, jlink, guid, title, job_position,
+                  introduction, company, experience, description,
+                  studies, industry, contract, working_hours,
+                  region, pubdate, expirydate) FROM STDIN with csv""", buffer)
+  conn.commit()
+  cursor.close()
+  conn.close()
 ```
 [SET Dependencies]  
 [START Airflow Webserver]  
