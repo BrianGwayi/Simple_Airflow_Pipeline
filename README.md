@@ -9,7 +9,7 @@ Uniform Resource Locators - URLs
 [Detailed RSS Feed - https://www.myjobmag.co.ke/jobsxml_by_categories.xml](https://www.myjobmag.co.ke/jobsxml_by_categories.xml)  
 [Aggregate Feed - https://www.myjobmag.co.ke/aggregate_feed.xml](https://www.myjobmag.co.ke/aggregate_feed.xml)    
 
-Goals:  
+### Goals:  
 Set up Postres SQL database  
 Extract - xml_feed   
 Transform - xml_feed  
