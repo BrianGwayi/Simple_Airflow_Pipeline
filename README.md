@@ -38,7 +38,7 @@ catch_up=False,
 tags=["Team A"],
 )
 ```
-### [START Extract Task]
+#### [START Extract Task]
 ```
 @task()
 def gt_response():
