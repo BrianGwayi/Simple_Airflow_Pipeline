@@ -1,12 +1,12 @@
 # Simple_Airflow_Pipeline
 ## Simple Job Listing Datapipeline
-Site: myjobmag.co.ke  
+Project Brief   
 Myjobmag is a job listing company that efficiently connect great candidates to great companies at all levels while constantly developing both ends of the marketplace in diverse functional areas.
-Myjobmag shares job related through a standardised xml job feed. The xml job feed returns 100 most recent job lisitng,the oldest job listings are deleted whenever most recent jobs are available on a rollup basis. 
+Myjobmag shares job related information through a standardised xml job feed. The xml job feed returns 100 most recent job lisitng on a rollup basis, deleting old lsiting when new a listings is available. 
 
-Uniform Resource Locators - URLs  
+XML FEEDs - URLs   
 [Summarized RSS Feed - https://www.myjobmag.co.ke/jobsxml.xml](https://www.myjobmag.co.ke/jobsxml.xml)  
-[Detailed RSS Feed - https://www.myjobmag.co.ke/jobsxml_by_categories.xml](https://www.myjobmag.co.ke/jobsxml_by_categories.xml)  
+[Detailed RSS Feed - https://www.myjobmag.co.ke/jobsxml_by_categories.xml](https://www.myjobmag.co.ke/jobsxml_by_categories.xml) 
 [Aggregate Feed - https://www.myjobmag.co.ke/aggregate_feed.xml](https://www.myjobmag.co.ke/aggregate_feed.xml)    
 
 ### Goals:  
