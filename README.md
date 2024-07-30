@@ -14,6 +14,7 @@ Set up Postres SQL database
 Extract - xml_feed   
 Transform - xml_feed  
 Load - xml_feed to PostgreSQL  
+Build History - way past 100 listing
 
 ## End Goal - Job Listings in PostgreSQL Database
 ![End_Goal](assets/imgs/end_goal.png)
@@ -61,6 +62,30 @@ def tf_response():
 ```
 [START Load Task]
 ```
+@task()
+def recent_response(transform_response):
+
+  # Establish Connection to PostgreSQL Database
+  conn = psycopg2.connect(
+            database = "listing_db",
+            user = "postgres",
+            host= 'localhost',
+            password = "password",
+            port = 5432)
+  cursor = conn.cursor()
+
+  # Print PostgreSQL details
+  print("PostgreSQL server information")
+  print(conn.get_dsn_parameters(), "\n")
+
+  # Execute SQL Statement
+  loaded=pd.read_sql("SELECT *FROM jb_listing;", conn)
+  conn.close()
+
+  # Get delta (records not loaded)
+  delta = tf_response[~tf_response['id'].isin(loaded['jid'])]
+
+  return delta
 
 ```
 [SET Dependencies]
