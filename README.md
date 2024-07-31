@@ -2,7 +2,7 @@
 ## Simple Job Listing Datapipeline
 Project Brief   
 Myjobmag is a job listing company that efficiently connect great candidates to great companies at all levels while constantly developing both ends of the marketplace in diverse functional areas.
-Myjobmag shares job related information through a standardised xml job feed. The xml job feed returns 100 most recent job lisitng on a rollup basis, deleting old lsiting when new a listings is available. 
+Myjobmag shares job related information through a standardised xml job feed. The xml job feed returns 100 most recent job lisitng on a rollup basis, deleting old lsiting when new a listing is available. 
 
 XML FEEDs - URLs   
 [Summarized RSS Feed - https://www.myjobmag.co.ke/jobsxml.xml](https://www.myjobmag.co.ke/jobsxml.xml)  
@@ -31,6 +31,34 @@ import requests
 import psyscopg2
 import xmltodict
 ```
+Default Arguments  
+An example containing all parameters  
+
+```
+default_args = {
+    'owner': 'airflow',
+    'depends_on_past': True,
+    'email': 'airflow@example.com',
+    'email_on_failure': True,
+    'email_on_retry': False,
+    'retries': 3,
+    'retry_delay': timedelta(minutes=5),
+    'retry_exponential_backoff': False,
+    'max_retry_delay': timedelta(hours=1),
+    'start_date': datetime(2024, 1, 1),
+    'end_date': datetime(2024, 12, 31),
+    'schedule_interval': '@daily',
+    'catchup': False,
+    'sla': timedelta(hours=2),
+    'execution_timeout': timedelta(minutes=30),
+    'queue': 'default',
+    'priority_weight': 1,
+    'wait_for_downstream': True,
+    'trigger_rule': 'all_success',
+    'pool': 'default_pool'
+}
+``
+
 Instatiate a DAG
 ```
 @dag(
