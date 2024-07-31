@@ -31,9 +31,7 @@ import requests
 import psyscopg2
 import xmltodict
 ```
-Default Arguments  
-An example containing all parameters  
-
+Default Arguments - An example containing all parameters   
 ```
 default_args = {
     'owner': 'airflow',
@@ -57,7 +55,7 @@ default_args = {
     'trigger_rule': 'all_success',
     'pool': 'default_pool'
 }
-``
+```
 
 Instatiate a DAG
 ```
