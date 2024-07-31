@@ -124,7 +124,7 @@ def recent_response(transform_response):
 @task()
 def load_delta():
 buffer = StringIO()
-load_response.to_csv(buffer, index=False, header=False)
+gt_delta.to_csv(buffer, index=False, header=False)
 buffer.seek(0)
   cursor.copy_expert("""COPY jb_listing (jid, jlink, guid, title, job_position,
                   introduction, company, experience, description,
