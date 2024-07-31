@@ -64,6 +64,7 @@ schedule=None,
 start_date=datetime(2024,7,30),
 catch_up=False,
 tags=["Team A"],
+default_args=default_args,
 )
 ```
 [START Extract Task]
