@@ -89,7 +89,7 @@ def tf_response():
   return tf_response
 ```
 ## Get Delta
-A delta load implies that the entire data of a relational database table is not repeatedly extracted, but only the new data that has been added to a table since the last load. With delta load, you can process only data that needs to be processed, either new data or changed data.
+A delta load implies that the entire data of a relational database table is not repeatedly extracted, but only the new data that has been added to a table since the last load. With delta load, you can process only data that needs to be processed, either new data or changed data.     
 [START Load Task]
 ```
 @task()
