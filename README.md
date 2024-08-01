@@ -16,7 +16,7 @@ XML FEEDs - URLs
 Set up Postres SQL database  
 Extract - xml_feed >> Kenya,  Ghana,  South Africa,  Nigeria   
 Transform - xml_feed    
-Merege feeds from Kenya,  Ghana,  South Africa,  Nigeria  
+Merge feeds from Kenya,  Ghana,  South Africa,  Nigeria  
 Get delta data   
 Load - delta to PostgreSQL  
 Build History - way past 100 listing
