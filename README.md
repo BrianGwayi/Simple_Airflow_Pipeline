@@ -17,10 +17,10 @@ Get delta - new job lisitngs added
 Load - delta to PostgreSQL  
 Build History - way past 100 listing
 
-#### End Goal     
+#### End Goal:     
 ![End_Goal](assets/imgs/end_goal.png)
 
-## Extract - xml_feed
+### Extract - xml_feed
 Import Required Libraries
 ```
 from airflow.decorators import dag, tasks
@@ -31,29 +31,29 @@ import requests
 import psyscopg2
 import xmltodict
 ```
-Default Arguments - An example containing all parameters   
+Default Arguments
 ```
 default_args = {
-    'owner': 'airflow',
-    'depends_on_past': True,
-    'email': 'airflow@example.com',
-    'email_on_failure': True,
-    'email_on_retry': False,
+    'owner': 'gwayi',
+    #'depends_on_past': True,
+    #'email': 'airflow@example.com',
+    #'email_on_failure': True,
+    #'email_on_retry': False,
     'retries': 3,
     'retry_delay': timedelta(minutes=5),
-    'retry_exponential_backoff': False,
-    'max_retry_delay': timedelta(hours=1),
-    'start_date': datetime(2024, 1, 1),
-    'end_date': datetime(2024, 12, 31),
-    'schedule_interval': '@daily',
-    'catchup': False,
-    'sla': timedelta(hours=2),
-    'execution_timeout': timedelta(minutes=30),
-    'queue': 'default',
-    'priority_weight': 1,
-    'wait_for_downstream': True,
-    'trigger_rule': 'all_success',
-    'pool': 'default_pool'
+    #'retry_exponential_backoff': False,
+    #'max_retry_delay': timedelta(hours=1),
+    #'start_date': datetime(2024, 1, 1),
+    #'end_date': datetime(2024, 12, 31),
+    #'schedule_interval': '@daily',
+    #'catchup': False,
+    #'sla': timedelta(hours=2),
+    #'execution_timeout': timedelta(minutes=30),
+    #'queue': 'default',
+    #'priority_weight': 1,
+    #'wait_for_downstream': True,
+    #'trigger_rule': 'all_success',
+    #'pool': 'default_pool'
 }
 ```
 
@@ -76,7 +76,7 @@ def gt_response():
   response = xmltodict.parse(xml_feed.text)
   return response['rss']['channel']['item']
 ```
-## Transform - xml_feed
+### Transform - xml_feed
 [START Transform Task]
 ```
 @task()
@@ -90,7 +90,6 @@ def tf_response():
 ```
 ## Get Delta
 A delta load implies that the entire data of a relational database table is not repeatedly extracted, but only the new data that has been added to a table since the last load. With delta load, you can process only data that needs to be processed, either new data or changed data.     
-[START Load Task]
 ```
 @task()
 def recent_response(transform_response):
