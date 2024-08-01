@@ -17,8 +17,7 @@ Get delta - new job lisitngs added
 Load - delta to PostgreSQL  
 Build History - way past 100 listing
 
-#### End Goal
-Push Job Listings into a PostgreSQL Database     
+#### End Goal     
 ![End_Goal](assets/imgs/end_goal.png)
 
 ## Extract - xml_feed
