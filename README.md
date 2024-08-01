@@ -15,7 +15,7 @@ XML FEEDs - URLs
 #### Goals:  
 Set up Postres SQL database  
 Extract - xml_feed >> Kenya,  Ghana,  South Africa,  Nigeria   
-Transform - xml_feed 
+Transform - xml_feed    
 Merege feeds from Kenya,  Ghana,  South Africa,  Nigeria  
 Get delta data   
 Load - delta to PostgreSQL  
