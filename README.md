@@ -88,8 +88,8 @@ def tf_response():
           'contact_detail','contact_telephone'], axis=1)
   return tf_response
 ```
-## Get Delta
-A delta load implies that the entire data of a relational database table is not repeatedly extracted, but only the new data that has been added to a table since the last load. With delta load, you can process only data that needs to be processed, either new data or changed data.     
+### Get Delta
+A delta/incremental load implies that the entire data of a relational database table is not repeatedly extracted, but only the new data that has been added to a table since the last load. With delta load, you can process only data that needs to be processed, either new data or changed data.     
 ```
 @task()
 def recent_response(transform_response):
@@ -118,7 +118,7 @@ def recent_response(transform_response):
   return delta
 
 ```
-## Load Delta - new job listings added
+### Load Delta
 ```
 @task()
 def load_delta():
@@ -145,6 +145,6 @@ load_delta = load_delta(gt_delta)
 airflow webserver -p 8080
 airflow scheduler
 ```
-## Airflow Webserver UI
+### Airflow Webserver UI
 ![End_Goal](assets/imgs/webserver_ui.png)
 
