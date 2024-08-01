@@ -11,14 +11,14 @@ XML FEEDs - URLs
 
 #### Goals:  
 Set up Postres SQL database  
-Extract - xml_feed >> Kenya, Ghana,South Africa,Nigeria   
+Extract - xml_feed >> Kenya,  Ghana,  South Africa,  Nigeria   
 Transform - xml_feed 
 Get delta - new job lisitngs added
 Load - delta to PostgreSQL  
 Build History - way past 100 listing
 
 #### End Goal
-Push Job Listings into a PostgreSQL Database
+Push Job Listings into a PostgreSQL Database     
 ![End_Goal](assets/imgs/end_goal.png)
 
 ## Extract - xml_feed
