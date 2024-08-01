@@ -4,10 +4,10 @@ Myjobmag is a job listing company that efficiently connect great candidates to g
 Myjobmag shares job related information through a standardised xml job feed. The xml job feed returns 100 most recent job lisitng on a rollup basis, deleting old lsiting when new a listing is available. 
 
 XML FEEDs - URLs   
-[Kenya RSS Feed - https://www.myjobmag.co.ke/jobsxml.xml](https://www.myjobmag.co.ke/jobsxml.xml)  
-[Ghana RSS Feed - https://www.myjobmagghana.com/aggregate_feed.xml]("https://www.myjobmagghana.com/aggregate_feed.xml) 
-[South Africa RSS Feed - https://www.myjobmag.co.za/aggregate_feed.xml](https://www.myjobmag.co.za/aggregate_feed.xml) 
-[Nigeria RSS Feed- https://www.myjobmag.com/aggregate_feed.xml](https://www.myjobmag.com/aggregate_feed.xml)
+[Kenya RSS Feed - https://www.myjobmag.co.ke/aggregate_feed.xml](https://www.myjobmag.co.ke/aggregate_feed.xml)        
+[Ghana RSS Feed - https://www.myjobmagghana.com/aggregate_feed.xml]("https://www.myjobmagghana.com/aggregate_feed.xml)   
+[South Africa RSS Feed - https://www.myjobmag.co.za/aggregate_feed.xml](https://www.myjobmag.co.za/aggregate_feed.xml)    
+[Nigeria RSS Feed- https://www.myjobmag.com/aggregate_feed.xml](https://www.myjobmag.com/aggregate_feed.xml)    
 
 #### Goals:  
 Set up Postres SQL database  
