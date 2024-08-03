@@ -10,8 +10,10 @@ Orchestration - Apache Airflow
 **Code**   
 [.py elt_code](elt_pipeline.py)     
 
-![End_Goal](assets/imgs/ui_webserver.png)   
-![End_Goal](assets/imgs/end_goal.png)  
+![End_Goal](assets/imgs/ui_webserver.png)     
+
+![End_Goal](assets/imgs/end_goal.png)     
+
 ![End_Goal](assets/imgs/tab.png)   
 
 Resources   
