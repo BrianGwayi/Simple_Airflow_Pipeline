@@ -38,6 +38,6 @@ def alter(df):
            .assign(country="Kenya")
            .assign(trial= lambda x:x.jid*10))
     return df
-transform(df)
+alter(df)
 ```
 
