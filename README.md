@@ -26,6 +26,4 @@ XML FEEDs - URLs
 * Load - delta to PostgreSQL  
 * Build History - way past 100 listing
 
-#### End Goal:    
-
 
