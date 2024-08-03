@@ -4,7 +4,8 @@
 Scrap xml data feed   
 Parse the xml feed   
 Transform   
-Load to PostgreSQL database   
+Load to PostgreSQL database 
+Orchestrate workflow in Apache Airflow
 
 **Code**   
 [.py elt_code](elt_pipeline.py)     
@@ -18,15 +19,6 @@ XML FEEDs - URLs
 [Kenya RSS Feed - https://www.myjobmag.co.ke/aggregate_feed.xml](https://www.myjobmag.co.ke/aggregate_feed.xml)        
 [Ghana RSS Feed - https://www.myjobmagghana.com/aggregate_feed.xml](https://www.myjobmagghana.com/aggregate_feed.xml)   
 [South Africa RSS Feed - https://www.myjobmag.co.za/aggregate_feed.xml](https://www.myjobmag.co.za/aggregate_feed.xml)    
-[Nigeria RSS Feed- https://www.myjobmag.com/aggregate_feed.xml](https://www.myjobmag.com/aggregate_feed.xml)     
-
-#### Goals:  
-* Set up Postres SQL database  
-* Extract - xml_feed >> Kenya,  Ghana,  South Africa,  Nigeria   
-* Transform - xml_feed    
-* Merge feeds from Kenya,  Ghana,  South Africa,  Nigeria  
-* Get delta data   
-* Load - delta to PostgreSQL  
-* Build History - way past 100 listing
+[Nigeria RSS Feed- https://www.myjobmag.com/aggregate_feed.xml](https://www.myjobmag.com/aggregate_feed.xml)   
 
 
