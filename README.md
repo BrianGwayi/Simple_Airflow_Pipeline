@@ -1,11 +1,11 @@
 # Simple_Airflow_Pipeline
 #### Project Brief 
 
-Scrap xml data feed   
-Parse the xml feed   
-Transform   
-Load to PostgreSQL database 
-Orchestrate workflow in Apache Airflow
+* Scrap xml data feed   
+* Parse the xml feed   
+* Transform   
+* Load to PostgreSQL database 
+* Orchestrate workflow in Apache Airflow
 
 **Code**   
 [.py elt_code](elt_pipeline.py)     
