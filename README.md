@@ -18,8 +18,8 @@ XML FEEDs - URLs
 [Nigeria RSS Feed- https://www.myjobmag.com/aggregate_feed.xml](https://www.myjobmag.com/aggregate_feed.xml)     
 
 #### Goals:  
-*Set up Postres SQL database  
-*Extract - xml_feed >> Kenya,  Ghana,  South Africa,  Nigeria   
+* Set up Postres SQL database  
+* Extract - xml_feed >> Kenya,  Ghana,  South Africa,  Nigeria   
 * Transform - xml_feed    
 * Merge feeds from Kenya,  Ghana,  South Africa,  Nigeria  
 * Get delta data   
