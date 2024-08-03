@@ -4,8 +4,8 @@
 Scrap xml data feed   
 Parse the xml feed   
 Transform   
-Load to PostgreSQL database 
-Orchestrate workflow in Apache Airflow
+Load to PostgreSQL database    
+Orchestration - Apache Airflow
 
 **Code**   
 [.py elt_code](elt_pipeline.py)     
