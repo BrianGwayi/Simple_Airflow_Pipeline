@@ -21,7 +21,8 @@ XML FEEDs - URLs
 [South Africa RSS Feed - https://www.myjobmag.co.za/aggregate_feed.xml](https://www.myjobmag.co.za/aggregate_feed.xml)    
 [Nigeria RSS Feed- https://www.myjobmag.com/aggregate_feed.xml](https://www.myjobmag.com/aggregate_feed.xml)   
 
-# Pandas Chaining Method
+# Areas of Improvement
+### Pandas Chaining Method
 Chaining method is a way to join multiple operations in concise and expressive way.   
 It allows us to link together a sequence of transformation and cleaning steps.   
 Example of chaining method  
