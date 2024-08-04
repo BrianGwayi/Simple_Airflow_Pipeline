@@ -25,6 +25,23 @@ XML FEEDs - URLs
 [Nigeria RSS Feed- https://www.myjobmag.com/aggregate_feed.xml](https://www.myjobmag.com/aggregate_feed.xml)   
 
 # Areas of Improvement
+### Staging Area
+Example AWS s3 bucket
+```
+def create_bucket(bucket_name, region=None):
+    try:
+        if region is None:
+        client = boto3.client(s3)
+        client = boto3.client(s3, region_name=region)
+        client.create_bucket(Bucket=bucket_name)
+        else
+        location = {LocationConstraint:region}
+        client.create_bucket(Bucket=bucket_name, CreateBucketConfiguration=location)
+    execpt
+        logging.error(e)
+        return False
+    return True
+```
 ### Pandas Chaining Method
 Chaining method is a way to join multiple operations in concise and expressive way.   
 It allows us to link together a sequence of transformation and cleaning steps.   
