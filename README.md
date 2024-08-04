@@ -45,7 +45,7 @@ def create_bucket(bucket_name, region=None):
 ### Pandas Chaining Method
 Chaining method is a way to join multiple operations in concise and expressive way.   
 It allows us to link together a sequence of transformation and cleaning steps.   
-Example of chaining method  
+Chaining method in action  
 ```
 def alter(df):
     df = (response
